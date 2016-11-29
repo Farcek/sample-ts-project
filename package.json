@@ -1,0 +1,37 @@
+{
+    "name": "myproject",
+    "version": "1.0.0",
+    "description": "my sample project",
+    "main": "index.js",
+    "scripts": {
+        "start": "node --harmony build/serve.js",
+        "build": "tsc",
+        "debug": "npm run build && npm run start"
+    },
+    "author": "farcek <farcek@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "bluebird": "^3.4.6",
+        "etc": "^1.1.0",
+        "express": "^4.14.0",
+        "morgan": "^1.7.0",
+        "mysql": "^2.12.0",
+        "redis": "^2.6.3",
+        "sequelize": "^3.27.0",
+        "tsrouter": "git+https://github.com/Farcek/tsrouter.git#v1.0.0",
+        "express-serve": "git+https://github.com/Farcek/express-serve.git#v1.0.0"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-sftp": "^0.1.5",
+        "gulp-shell": "^0.5.2",
+        "gulp-ssh": "^0.6.0",
+        "gulp-uglify": "^2.0.0",
+        "pump": "^1.0.1",
+        "run-sequence": "^1.2.2"
+    },
+    "deployer": {
+        "clearDirs": ["build"],
+        "paths": ["build/**.js", "config/**.js", "eco.json", "gulpfile.js", "package.json"]
+    }
+}

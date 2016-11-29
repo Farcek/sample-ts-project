@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "rootDir": "src",
+        "outDir": "build",
+
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": true
+
+    },
+    "files": [
+        "config/config.d.ts",
+        "typings/index.d.ts",
+        "src/serve.ts"
+    ]
+}
